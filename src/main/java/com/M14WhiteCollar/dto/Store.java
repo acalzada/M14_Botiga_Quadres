@@ -1,5 +1,7 @@
 package com.M14WhiteCollar.dto;
 
+import java.util.List;
+
 import javax.persistence.*;
 
 @Entity
@@ -14,6 +16,10 @@ public class Store {
 	
 	@Column(name="MAX_CAPACITY", nullable=false)
 	private int maxCapacity;
+	
+	@OneToMany(cascade = CascadeType.ALL)
+	@JoinColumn(name="store_id")
+	private List <Frame> pictures;
 	
 	// Constructors
 	
@@ -50,6 +56,18 @@ public class Store {
 	
 	public void setMaxCapacity(int maxCapacity) {
 		this.maxCapacity = maxCapacity;
+	}
+	
+	public List<Frame> getPictures() {
+		return this.pictures;
+	}
+	
+	public void addPicture(Frame frame) {
+		this.pictures.add(frame);
+	}
+	
+	public void purgePictures() {
+		this.pictures.clear();
 	}
 	
 }

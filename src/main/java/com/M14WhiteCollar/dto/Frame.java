@@ -1,6 +1,6 @@
 package com.M14WhiteCollar.dto;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 import javax.persistence.*;
 
@@ -21,8 +21,7 @@ public class Frame {
 	private int price;
 	
 	@Column(nullable=true)
-	@Temporal(TemporalType.TIMESTAMP)
-	private Date storeEntryDate;
+	private LocalDateTime storeEntryDate;
 	
 	
 	// Constructors
@@ -104,15 +103,15 @@ public class Frame {
 	/**
 	 * @return the storeEntryDate
 	 */
-	public Date getStoreEntryDate() {
+	public LocalDateTime getStoreEntryDate() {
 		return storeEntryDate;
 	}
 
 	/**
-	 * @param storeEntryDate the storeEntryDate to set
+	 * @param localDateTime the storeEntryDate to set
 	 */
-	public void setStoreEntryDate(Date storeEntryDate) {
-		this.storeEntryDate = storeEntryDate;
+	public void setStoreEntryDate(LocalDateTime localDateTime) {
+		this.storeEntryDate = localDateTime;
 	}
 	
 

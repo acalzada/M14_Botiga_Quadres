@@ -21,7 +21,7 @@ public class StoreServiceImpl implements StoreService {
 
 	@Override
 	public List<Store> getAllStores() {
-		return storeDAO.findAll();
+		return storeDAO.getAllStoresNameAndCapacity();
 	}
 	
 	@Override
@@ -34,5 +34,12 @@ public class StoreServiceImpl implements StoreService {
 		//TO-DO create relationship between Frame and Store tables
 		return frameDAO.save(frame);
 	}
+
+	public Store storeById(Long id) {
+		return storeDAO.findById(id).get();
+	}
 	
+	public void updateStore(Store store) {
+		storeDAO.save(store);
+	}
 }

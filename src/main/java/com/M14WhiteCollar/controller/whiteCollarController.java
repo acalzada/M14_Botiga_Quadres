@@ -1,8 +1,10 @@
 package com.M14WhiteCollar.controller;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -32,8 +34,27 @@ public class WhiteCollarController {
 	}
 	
 	@PostMapping("/shops/{id}/pictures")
-	public Frame addPicture(@PathVariable(name="id") Long id, @RequestBody Frame frame) {
-		return storeServiceImpl.addFrame(id, frame);
+	public List<Frame> addPicture(@PathVariable(name="id") Long id, @RequestBody Frame frame) {
+		Store store = storeServiceImpl.storeById(id);
+		frame.setStoreEntryDate(LocalDateTime.now());
+		store.addPicture(frame);
+		storeServiceImpl.updateStore(store);
+		store = storeServiceImpl.storeById(id);
+		return store.getPictures();
+	}
+	
+	@GetMapping("/shops/{id}/pictures")
+	public List<Frame> getShopPictures(@PathVariable(name="id") Long id) {
+		Store store = storeServiceImpl.storeById(id);
+		return store.getPictures();
+	}
+	
+	@DeleteMapping("/shops/{id}/pictures")
+	public Store purgeShopPictures(@PathVariable(name="id") Long id) {
+		Store store = storeServiceImpl.storeById(id);
+		store.purgePictures();
+		storeServiceImpl.updateStore(store);
+		return storeServiceImpl.storeById(id);
 	}
 	
 	
