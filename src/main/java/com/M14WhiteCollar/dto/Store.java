@@ -4,8 +4,11 @@ import java.util.List;
 
 import javax.persistence.*;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 @Entity
 @Table(name="STORES")
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class Store {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -17,7 +20,7 @@ public class Store {
 	@Column(name="MAX_CAPACITY", nullable=false)
 	private int maxCapacity;
 	
-	@OneToMany(cascade = CascadeType.ALL)
+	@OneToMany(cascade = CascadeType.ALL, orphanRemoval=true)
 	@JoinColumn(name="store_id")
 	private List <Frame> pictures;
 	

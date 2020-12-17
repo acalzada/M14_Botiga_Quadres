@@ -8,6 +8,8 @@ import com.M14WhiteCollar.dto.Store;
 public interface StoreService {
 	public List<Store> getAllStores();
 	
+	public Store findById(Long id);
+	
 	public Store addStore(Store store);
 	
 	public Frame addFrame(Long id, Frame frame);

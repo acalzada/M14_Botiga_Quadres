@@ -28,6 +28,11 @@ public class WhiteCollarController {
 		return storeServiceImpl.getAllStores();
 	}
 	
+	@GetMapping("/shops/{id}")
+	public Store getStoreFullInfo(@PathVariable(name="id") Long id) {
+		return storeServiceImpl.findById(id);
+	}
+	
 	@PostMapping("/shops")
 	public Store addStore(@RequestBody Store store) {
 		return storeServiceImpl.addStore(store);

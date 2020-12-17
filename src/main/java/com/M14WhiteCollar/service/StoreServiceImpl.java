@@ -25,6 +25,11 @@ public class StoreServiceImpl implements StoreService {
 	}
 	
 	@Override
+	public Store findById(Long id) {
+		return storeDAO.findById(id).get();
+	}
+	
+	@Override
 	public Store addStore(Store store) {
 		return storeDAO.save(store);
 	}

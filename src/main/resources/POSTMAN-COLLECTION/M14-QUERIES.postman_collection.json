@@ -1,0 +1,354 @@
+{
+	"info": {
+		"_postman_id": "2519414f-dec3-48e2-a79a-967731a2a905",
+		"name": "M14-QUERIES",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "STEP 1)   LIST Shops",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Las mininas\",\n    \"author\": \"Who\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8181/shops/",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"shops",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "STEP 2)   POST New Store",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{{store_1}}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8181/shops/",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"shops",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "STEP 3)   LIST Shops",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Las mininas\",\n    \"author\": \"Who\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8181/shops/",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"shops",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "STEP 4)   GET New Shop (4)  Pictures",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Las mininas\",\n    \"author\": \"Who\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8181/shops/4/pictures",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"shops",
+						"4",
+						"pictures"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "STEP 5)   POST New Picture 1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{{picture_1}}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8181/shops/4/pictures",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"shops",
+						"4",
+						"pictures"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "STEP 6)   POST New Picture 2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{{picture_2}}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8181/shops/4/pictures",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"shops",
+						"4",
+						"pictures"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "STEP 7)   GET New Shop (4)  Pictures Added",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Las mininas\",\n    \"author\": \"Who\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8181/shops/4/pictures",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"shops",
+						"4",
+						"pictures"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "STEP 8)   GET Shop 2 Pictures",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Las mininas\",\n    \"author\": \"Who\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8181/shops/2/pictures",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"shops",
+						"2",
+						"pictures"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "STEP 9)   DELETE Shop 2 Pictures",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Las mininas\",\n    \"author\": \"Who\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8181/shops/2/pictures",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"shops",
+						"2",
+						"pictures"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "STEP 10)   GET Shop 2 (EMPTY)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Las mininas\",\n    \"author\": \"Who\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8181/shops/2/pictures",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"shops",
+						"2",
+						"pictures"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "c5cb8ba5-0662-4170-ab6a-abf262901d80",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "d21b14fc-fc4c-47f6-95ba-985cbe3fa689",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "b7977081-d378-4008-98a6-8c6e4f8b7554",
+			"key": "picture_1",
+			"value": "{\"name\":\"New Picture 1\", \"author\": \"new Author 1\"}"
+		},
+		{
+			"id": "1e51e11a-c735-422d-b1c5-3985449f3ba6",
+			"key": "picture_2",
+			"value": "{\"name\":\"New Picture 2\", \"author\": \"new Author 2\"}"
+		},
+		{
+			"id": "9733182e-296c-482f-82e6-e6c0a203eb33",
+			"key": "store_1",
+			"value": "{\"name\":\"New Exclusive Store\",\"maxCapacity\": 5}"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
